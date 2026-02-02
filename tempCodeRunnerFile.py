@@ -1,2 +1,15 @@
-l1=[21,22,23,24,25]
-print(l1)
+def maxProfit(List):
+    buy = List[0]
+    pr = 0 
+    for i in range(1 , len(List) ):
+        sell = List[i]
+        if sell > buy :
+            pr = max( pr , (sell - buy))
+        if buy > List[i]:
+            buy = List[i]
+
+    return pr   
+     
+List = [7,1,5,3,6,4]
+ans = maxProfit(List)
+print("Max Profit is :",ans)

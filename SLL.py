@@ -11,6 +11,8 @@ class SLL:
         t = Node(data)
         t.Next = self.start
         self.start = t
+
+        
     def insert_at_end(self, data):
         pass
     def insert_at_after(self, data):
